@@ -1,10 +1,5 @@
-const nextConfig = {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-          "@/*": ["*"]
-        }
-      }
+module.exports = {
+ 
 }
 
-module.exports = nextConfig
+

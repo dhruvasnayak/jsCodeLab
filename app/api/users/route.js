@@ -1,5 +1,4 @@
 import executeQuerry from "@/lib/db";
-// import executeQuerry from "../../../lib/db";
 
 export async function GET(req, res, next) {
     const users = await executeQuerry(
