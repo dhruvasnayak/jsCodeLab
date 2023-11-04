@@ -1,0 +1,12 @@
+{
+  "/_not-found": "/_not-found",
+  "/page": "/",
+  "/favicon.ico/route": "/favicon.ico",
+  "/contest/page": "/contest",
+  "/login/page": "/login",
+  "/register/page": "/register",
+  "/problems/page": "/problems",
+  "/profile/page": "/profile",
+  "/problems/[question]/page": "/problems/[question]",
+  "/api/users/route": "/api/users"
+}

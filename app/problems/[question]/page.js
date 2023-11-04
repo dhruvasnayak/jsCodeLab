@@ -20,59 +20,58 @@ function Code() {
 
     const handleRunCode = (e) => {
         try {
-            let capturedConsoleOutput = ''; // Initialize an empty string to capture console output
-            const originalConsoleLog = console.log; // Store the original console.log function
-      
+            let capturedConsoleOutput = '';
+            const originalConsoleLog = console.log;
             // Override console.log to capture output
             console.log = (message) => {
-              capturedConsoleOutput += message + '\n'; // Append console output to the variable
+                capturedConsoleOutput += message + '\n'; // Append console output to the variable
             };
-      
+
             // Execute the JavaScript code
             eval(code);
-      
+
             // Restore the original console.log function
             console.log = originalConsoleLog;
-      
+
             setResult(capturedConsoleOutput); // Set the captured output as the result
-          } catch (error) {
+        } catch (error) {
             setResult(`Error: ${error.message}`);
-          }
+        }
 
     };
 
 
     return (
         <div className='main'>
-        <div className='navbar'>
-        <div className='webname'>
-            <p>Java<span>Script</span></p>
-        </div>
-        <div className='temp'>
-            <div className='run-button'>
-                <button onClick={handleRunCode}>Run</button>
+            <div className='flex'>
+                <div className='w-[500px] m-5 border-solid border-2 border-black'>
+                    <p>write a code to find all the prime numbers from 2 lo n</p>
+                    <br />
+                    <p>n is less then 1000</p>
+                </div>
+                <div className='m-5'>
+                    <CodeMirror className='code-box'
+                        width='700px'
+                        height='500px'
+                        value={code}
+                        options={{
+                            mode: 'js',
+                            theme: 'dracula',
+                        }}
+                        onChange={handleChange}
+                    />
+                    <div className='flex justify-center'>
+                        <div className='border-solid border-2 border-black rounded-lg w-[500px] text-center '>
+                            <button onClick={handleRunCode}>Run</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
-    </div>
-            <div className='container'>
-            <div className='container-left'>
-            <CodeMirror className='code-box'
-                width='100%'
-                height='480px'
-                value={code}
-                options={{
-                    mode: 'js',
-                    theme: 'dracula',
-                }}
-                onChange={handleChange}
-            />
-        </div>
-                <div className='container-right'>
-                    <div className='output-box'>
-                        <textarea placeholder='output' rows={14} cols={30} readOnly value={output} style={{ whiteSpace: 'pre-wrap' }} >
-                        </textarea>
-                    </div>
+            <div className='flex justify-center'>
+                <div >
+                    <textarea className='border-solid border-2 border-gray-900 ' placeholder='output' rows={14} cols={70} readOnly value={output} style={{ whiteSpace: 'pre-wrap' }} >
+                    </textarea>
                 </div>
             </div>
         </div>
