@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
-import "./Code.css"
 
 function Code() {
     const [code, setCode] = useState('console.log("hello world!")');
@@ -42,16 +41,19 @@ function Code() {
 
 
     return (
-        <div className='main'>
+        <div className='main bg-gray-400'>
             <div className='flex'>
-                <div className='w-[500px] m-5 border-solid border-2 border-black'>
-                    <p>write a code to find all the prime numbers from 2 lo n</p>
-                    <br />
-                    <p>n is less then 1000</p>
-                </div>
-                <div className='m-5'>
+                <textarea className='w-[350px] h-[525px] m-5 border-solid border-8 '>
+                    write a code to find all the prime numbers from 2 lo n
+                </textarea>
+                <div className='ml-5'>
+                    <div className='flex justify-center m-2 ml-[600px]'>
+                        <div onClick={handleRunCode} className='border-solid border-2 bg-gray-500 text-white border-black rounded-lg w-[200px] text-center '>
+                            <button >Run</button>
+                        </div>
+                    </div>
                     <CodeMirror className='code-box'
-                        width='700px'
+                        width='800px'
                         height='500px'
                         value={code}
                         options={{
@@ -60,11 +62,7 @@ function Code() {
                         }}
                         onChange={handleChange}
                     />
-                    <div className='flex justify-center'>
-                        <div className='border-solid border-2 border-black rounded-lg w-[500px] text-center '>
-                            <button onClick={handleRunCode}>Run</button>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 

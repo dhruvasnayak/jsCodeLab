@@ -78,17 +78,20 @@ export default function Problems() {
     ]
 
     return (
-        <div>
-            {data.map((i) => (
-                <Link href={`problems/${i.qton_id}`} key={i.qton_id}>
-                    <div className="border border-gray-800 p-1 mb-2 mx-5 my-1 hover:border-blue-900 cursor-pointer">
-                        <div className="bg-gray-300 flex justify-between items-center p-2">
-                            <div className="text-l mx-2 font-semibold">{i.qton_id}</div>
-                            <div className="border border-black ">{i.qton_points} points</div>
-                        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {data.map((i) => (
+            <Link href={`problems/${i.qton_id}`} key={i.qton_id}>
+                <div className="border border-gray-300 hover:border-blue-500 shadow-lg rounded-md p-4 cursor-pointer">
+                    <div className="bg-gray-100 p-2 rounded-t-md">
+                        <div className="text-xl font-semibold text-gray-800">{i.qton_id}</div>
                     </div>
-                </Link>
-            ))}
-        </div>
+                    <div className="bg-white p-4">
+                        <div className="text-gray-600">{i.qton_points} points</div>
+                    </div>
+                </div>
+            </Link>
+        ))}
+    </div>
+    
     )
 }
