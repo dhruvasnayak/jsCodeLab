@@ -1,3 +1,133 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./Components/Navbar.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  }
+
+.navbar-club {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.club-name {
+  display: inline-block;
+  margin-left: 15px
+}
+
+.club-name .cn1 {
+  margin: 0px;
+  padding: 0px;
+  color: rgba(209, 24, 24, 0.891);
+  font-size: 25px;
+}
+
+
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu .link {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.navbar-menu li a:hover {
+  color: rgba(101, 205, 96, 0.768);
+
+}
+
+.navbar-toggle {
+  display: none;
+  padding: 3px;
+}
+
+.navbar-toggle-icon {
+  display: block;
+  width: 27px;
+  height: 2px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .club-name .cn1 {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  
+
+  .navbar-club {
+    margin-bottom: 20px;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #fff;
+    width: 50%;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-toggle.clicked .navbar-toggle-icon:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+    height: 3px;
+    width: 20px;
+  }
+
+  .navbar-toggle.clicked .navbar-toggle-icon:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.clicked .navbar-toggle-icon:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+    height: 3px;
+    width: 20px;
+  }
+
+
+  .navbar-menu li {
+    margin: 10px 0;
+  }
+  
+  .navbar-menu li a{
+    width: 100%;
+  }
+
+
+  .navbar-toggle {
+    margin-top: 25px;
+    display: block;
+    cursor: pointer;
+  }
+}
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -578,20 +708,11 @@ video {
 .ml-\[600px\] {
   margin-left: 600px;
 }
-.mt-4 {
-  margin-top: 1rem;
-}
-.block {
-  display: block;
-}
 .flex {
   display: flex;
 }
 .grid {
   display: grid;
-}
-.hidden {
-  display: none;
 }
 .h-\[525px\] {
   height: 525px;
@@ -626,16 +747,8 @@ video {
 .justify-center {
   justify-content: center;
 }
-.justify-between {
-  justify-content: space-between;
-}
 .gap-4 {
   gap: 1rem;
-}
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -781,10 +894,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
 @media (min-width: 640px) {
 
   .sm\:grid-cols-2 {
@@ -802,14 +911,6 @@ video {
   }
 }
 @media (min-width: 1024px) {
-
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:hidden {
-    display: none;
-  }
 
   .lg\:w-1\/2 {
     width: 50%;
