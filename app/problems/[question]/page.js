@@ -4,9 +4,18 @@ import { useState } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 
 function Code() {
+
+    const qnData = {
+       qnid:1,
+       qndesc:"print hello world!",
+       qnout:"hello world!"
+      };
+
+      
     const [code, setCode] = useState('console.log("hello world!")');
     const [input, setInput] = useState('');
     const [output, setResult] = useState("");
+    const [temp,setTemp] = useState(null);
 
     const handleChange = (newCode) => {
         setCode(newCode);
@@ -32,7 +41,13 @@ function Code() {
             // Restore the original console.log function
             console.log = originalConsoleLog;
 
-            setResult(capturedConsoleOutput); // Set the captured output as the result
+            setResult(capturedConsoleOutput);
+            
+            if(qnData.qnout==capturedConsoleOutput)
+            {
+                setTemp(1);
+
+            }
         } catch (error) {
             setResult(`Error: ${error.message}`);
         }
@@ -43,18 +58,13 @@ function Code() {
     return (
         <div className='main bg-gray-400'>
             <div className='flex'>
-                <textarea className='w-[350px] h-[525px] m-5 border-solid border-8 '>
-                    write a code to find all the prime numbers from 2 lo n
+                <textarea value={qnData.qndesc} className='w-[350px] h-[515px] m-2 border-solid border-8 '>
                 </textarea>
-                <div className='ml-5'>
-                    <div className='flex justify-center m-2 ml-[600px]'>
-                        <div onClick={handleRunCode} className='border-solid border-2 bg-gray-500 text-white border-black rounded-lg w-[200px] text-center '>
-                            <button >Run</button>
-                        </div>
-                    </div>
+                <div className='mt-2 ml-5'>
+                    
                     <CodeMirror className='code-box'
                         width='800px'
-                        height='500px'
+                        height='460px'
                         value={code}
                         options={{
                             mode: 'js',
@@ -62,6 +72,12 @@ function Code() {
                         }}
                         onChange={handleChange}
                     />
+
+                    <div className='flex justify-center m-2'>
+                        <div onClick={handleRunCode} className='border-solid border-2 bg-blue-400 text-white border-black rounded-lg w-[700px] p-1 text-center '>
+                            <button >Run</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -72,6 +88,10 @@ function Code() {
                     </textarea>
                 </div>
             </div>
+            
+            {temp &&  <div> helllo world </div>}
+               
+            
         </div>
     );
 }

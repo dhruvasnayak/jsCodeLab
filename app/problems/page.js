@@ -78,7 +78,7 @@ export default function Problems() {
     ]
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-5 mx-10 gap-4">
         {data.map((i) => (
             <Link href={`problems/${i.qton_id}`} key={i.qton_id}>
                 <div className="border border-gray-300 hover:border-blue-500 shadow-lg rounded-md p-4 cursor-pointer">
