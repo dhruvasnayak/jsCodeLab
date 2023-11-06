@@ -13,7 +13,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="navbar text-white bg-gray-700 p-4">
+    <div className="navbar p-4">
       <div className="flex items-center justify-between">
         <div className="webname text-white text-xl font-bold">
           jsCodeLab
