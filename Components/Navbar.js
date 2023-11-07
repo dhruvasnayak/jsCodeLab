@@ -26,20 +26,17 @@ function Navbar() {
         </div>
 
         <ul className={`navbar-menu ${isActive ? 'active' : ''}`}>
-          <Link href="/problems" className="link">
+          <Link href="/home" className="link">
+            Home
+          </Link>
+          <Link href="/home/problems" className="link">
             Problems
           </Link>
-          <Link href="/contest" className="link">
+          <Link href="/home/contest" className="link">
             Contest
           </Link>
-          <Link href="/profile" className="link">
+          <Link href="/home/profile" className="link">
             Profile
-          </Link>
-          <Link href="/login" className="link">
-            Login
-          </Link>
-          <Link href="/register" className="link">
-            Register
           </Link>
         </ul>
 

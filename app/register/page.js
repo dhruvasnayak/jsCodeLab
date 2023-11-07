@@ -1,8 +1,13 @@
 "use client"
 import React from 'react';
 import { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 
 export default function Register() {
+
+    const router = useRouter();
 
     const [formData, setFormData] = useState({
         id: "",
@@ -39,6 +44,7 @@ export default function Register() {
                 body: JSON.stringify(formData),
             });
             if (response.ok) {
+                router.push('/');
                 console.log('Registration successful');
             } else {
                 console.error('Registration failed');
@@ -50,6 +56,15 @@ export default function Register() {
     }
 
     return (
+        <div>
+        <div className="bg-gray-600 p-4">
+          <div className="flex items-center justify-between">
+            <div className="text-white text-2xl font-bold">jsCodeLab</div>
+            <div>
+              <Link href="/" className="text-white hover:text-gray-300">Login</Link>
+            </div>
+          </div>
+        </div>
         <div className="min-h-screen flex items-center justify-center">
             <div className="bg-white shadow-md p-8 rounded-md w-96">
                 <h2 className="text-2xl font-bold mb-4">Register</h2>
@@ -111,6 +126,7 @@ export default function Register() {
                     </button>
                 </form>
             </div>
+        </div>
         </div>
     );
 }
