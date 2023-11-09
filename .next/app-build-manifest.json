@@ -1,5 +1,10 @@
 {
   "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -12,31 +17,31 @@
       "static/css/app/[user]/layout.css",
       "static/chunks/app/[user]/layout.js"
     ],
-    "/[user]/problems/[question]/page": [
+    "/[user]/home/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/[user]/problems/[question]/page.css",
-      "static/chunks/app/[user]/problems/[question]/page.js"
+      "static/chunks/app/[user]/home/page.js"
+    ],
+    "/[user]/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[user]/profile/page.js"
     ],
     "/[user]/problems/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[user]/problems/page.js"
     ],
-    "/[user]/home/page": [
+    "/[user]/problems/[question]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[user]/home/page.js"
+      "static/css/app/[user]/problems/[question]/page.css",
+      "static/chunks/app/[user]/problems/[question]/page.js"
     ],
-    "/[user]/contest/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[user]/contest/page.js"
-    ],
-    "/[user]/profile/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[user]/profile/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }

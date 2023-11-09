@@ -1,7 +1,10 @@
 {
-  "/api/get-user/route": "app/api/get-user/route.js",
-  "/[user]/problems/page": "app/[user]/problems/page.js",
+  "/not-found": "app/not-found.js",
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/get-question/route": "app/api/get-question/route.js",
   "/[user]/home/page": "app/[user]/home/page.js",
   "/[user]/profile/page": "app/[user]/profile/page.js",
+  "/[user]/problems/page": "app/[user]/problems/page.js",
   "/[user]/problems/[question]/page": "app/[user]/problems/[question]/page.js"
 }

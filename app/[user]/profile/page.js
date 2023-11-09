@@ -19,7 +19,6 @@ export default function Profile() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data[0])
         setUserData(data[0])
       })
       .catch(error => {

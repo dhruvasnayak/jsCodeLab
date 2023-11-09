@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
-
+import { useParams } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
+import { useState, useEffect } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -12,11 +12,33 @@ function Code() {
     const notify1 = () => toast('TEST CASE PASSED!');
     const notify2 = () => toast("Test Case Failed!");
 
-    const qnData = {
-        qnid: 1,
-        qndesc: "print hello world!",
-        qnout: "hello world!"
-    };
+    const params = useParams()
+
+    const [qnData,setQnData] = useState({}); 
+
+    useEffect(() => {
+        try {
+          const response = fetch('/api/get-question', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id: params.question }),
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log("Fetched question data: ", data[0]); 
+              setQnData(data[0]);
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
+        } catch (error) {
+          console.error('Registration Failed', error);
+        }
+      }, []);
+      
+
 
     var capturedConsoleOutput;
     const [code, setCode] = useState('console.log("hello world!")');
@@ -44,7 +66,7 @@ function Code() {
             setResult(`Error: ${error.message}`);
         }
 
-        if (qnData.qnout == capturedConsoleOutput) {
+        if (qnData.output == capturedConsoleOutput) {
             notify1();
         }
         else {
@@ -77,7 +99,7 @@ function Code() {
         <div className='main bg-gray-400'>
             <div className='flex'>
                 <div>
-                    <textarea className='w-[350px] m-2 h-[240px] border-solid border-8' value={qnData.qndesc} >
+                    <textarea className='w-[350px] m-2 h-[240px] border-solid border-8' value={qnData.qton_description} >
                     </textarea>
                     <textarea className='w-[350px] m-2 h-[240px] border-solid border-8' placeholder='output' readOnly value={output}>
                     </textarea>
