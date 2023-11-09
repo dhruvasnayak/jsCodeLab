@@ -13,8 +13,6 @@ export async function POST(req, res, next) {
             }
         )
 
-        console.log(user);
-
         return new Response(JSON.stringify(user), { status: 200 })
     }
 }

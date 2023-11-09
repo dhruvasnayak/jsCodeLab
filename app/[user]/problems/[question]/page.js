@@ -68,6 +68,18 @@ function Code() {
 
         if (qnData.output == capturedConsoleOutput) {
             notify1();
+                // try {
+                //   const response = fetch('/api/add-points', {
+                //     method: 'POST',
+                //     headers: {
+                //       'Content-Type': 'application/json',
+                //     },
+                //     body: JSON.stringify({uid:params.user,qid:params.question}),
+                //   })
+                // } catch (error) {
+                //   console.error('Registration Failed', error);
+                // }
+              
         }
         else {
             notify2();
