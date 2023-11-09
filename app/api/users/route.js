@@ -7,8 +7,7 @@ export async function GET(req, res, next) {
             values: [],
         }
     )
-    console.log(users)
-
     let data = JSON.stringify(users)
     return new Response(data, { status: 200 })
 }
+

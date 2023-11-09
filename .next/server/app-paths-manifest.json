@@ -1,6 +1,7 @@
 {
-  "/page": "app/page.js",
-  "/register/page": "app/register/page.js",
-  "/api/login/route": "app/api/login/route.js",
-  "/home/page": "app/home/page.js"
+  "/api/get-user/route": "app/api/get-user/route.js",
+  "/[user]/problems/page": "app/[user]/problems/page.js",
+  "/[user]/home/page": "app/[user]/home/page.js",
+  "/[user]/profile/page": "app/[user]/profile/page.js",
+  "/[user]/problems/[question]/page": "app/[user]/problems/[question]/page.js"
 }
