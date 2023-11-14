@@ -1,15 +1,15 @@
 {
   "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
     ],
     "/admin/page": [
       "static/chunks/webpack.js",
@@ -21,32 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/admin/[adminid]/page.js"
     ],
-    "/[user]/layout": [
+    "/admin/[adminid]/add-qn/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/[user]/layout.css",
-      "static/chunks/app/[user]/layout.js"
+      "static/chunks/app/admin/[adminid]/add-qn/page.js"
     ],
-    "/[user]/home/page": [
+    "/admin/[adminid]/del-qn/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[user]/home/page.js"
-    ],
-    "/[user]/profile/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[user]/profile/page.js"
-    ],
-    "/[user]/problems/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[user]/problems/page.js"
-    ],
-    "/[user]/problems/[question]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/[user]/problems/[question]/page.css",
-      "static/chunks/app/[user]/problems/[question]/page.js"
+      "static/chunks/app/admin/[adminid]/del-qn/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",

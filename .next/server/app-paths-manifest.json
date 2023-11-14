@@ -1,12 +1,9 @@
 {
   "/not-found": "app/not-found.js",
+  "/page": "app/page.js",
+  "/admin/page": "app/admin/page.js",
   "/admin/[adminid]/page": "app/admin/[adminid]/page.js",
-  "/api/questions/route": "app/api/questions/route.js",
-  "/api/get-question/route": "app/api/get-question/route.js",
-  "/api/add-points/route": "app/api/add-points/route.js",
-  "/api/get-user/route": "app/api/get-user/route.js",
-  "/[user]/home/page": "app/[user]/home/page.js",
-  "/[user]/problems/page": "app/[user]/problems/page.js",
-  "/[user]/profile/page": "app/[user]/profile/page.js",
-  "/[user]/problems/[question]/page": "app/[user]/problems/[question]/page.js"
+  "/api/del-qn/route": "app/api/del-qn/route.js",
+  "/admin/[adminid]/add-qn/page": "app/admin/[adminid]/add-qn/page.js",
+  "/admin/[adminid]/del-qn/page": "app/admin/[adminid]/del-qn/page.js"
 }
