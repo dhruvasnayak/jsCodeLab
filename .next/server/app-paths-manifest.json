@@ -1,9 +1,13 @@
 {
   "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/admin/[adminid]/page": "app/admin/[adminid]/page.js",
-  "/api/del-qn/route": "app/api/del-qn/route.js",
-  "/admin/[adminid]/add-qn/page": "app/admin/[adminid]/add-qn/page.js",
-  "/admin/[adminid]/del-qn/page": "app/admin/[adminid]/del-qn/page.js"
+  "/api/contest/route": "app/api/contest/route.js",
+  "/api/contest-question/route": "app/api/contest-question/route.js",
+  "/api/end-test/route": "app/api/end-test/route.js",
+  "/api/get-user/route": "app/api/get-user/route.js",
+  "/[user]/profile/page": "app/[user]/profile/page.js",
+  "/[user]/home/page": "app/[user]/home/page.js",
+  "/[user]/contest/page": "app/[user]/contest/page.js",
+  "/[user]/contest/ongoing/page": "app/[user]/contest/ongoing/page.js",
+  "/[user]/contest/ongoing/[contestid]/page": "app/[user]/contest/ongoing/[contestid]/page.js"
 }

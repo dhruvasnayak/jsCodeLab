@@ -1,4 +1,5 @@
-export default AContest = () =>{
+export default function Acontest()
+{
     
     return(
         <div>contest page</div>

@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react'
 export default function Profile() {
 
   const params = useParams()
+  params.user =  decodeURIComponent(params.user);
+
   const [userData,setUserData] = useState({}); 
   useEffect(()=>{
   try {

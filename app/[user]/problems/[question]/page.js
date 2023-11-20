@@ -13,6 +13,8 @@ function Code() {
     const notify2 = () => toast("Test Case Failed!");
 
     const params = useParams()
+    params.user = decodeURIComponent(params.user);
+
 
     const [qnData,setQnData] = useState({}); 
 
@@ -67,19 +69,20 @@ function Code() {
         }
 
         if (qnData.output == capturedConsoleOutput) {
-            notify1();
-                // try {
-                //   const response = fetch('/api/add-points', {
-                //     method: 'POST',
-                //     headers: {
-                //       'Content-Type': 'application/json',
-                //     },
-                //     body: JSON.stringify({uid:params.user,qid:params.question}),
-                //   })
-                // } catch (error) {
-                //   console.error('Registration Failed', error);
-                // }
-              
+            
+                try {
+                  const response = fetch('/api/add-points', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({uid:params.user,qid:params.question}),
+                  })
+                } catch (error) {
+                  console.error('Registration Failed', error);
+                }
+                console.log("India")
+                notify1();
         }
         else {
             notify2();

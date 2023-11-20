@@ -11,25 +11,58 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/admin/page": [
+    "/[user]/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin/page.js"
+      "static/css/app/[user]/layout.css",
+      "static/chunks/app/[user]/layout.js"
     ],
-    "/admin/[adminid]/page": [
+    "/[user]/home/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin/[adminid]/page.js"
+      "static/chunks/app/[user]/home/page.js"
     ],
-    "/admin/[adminid]/add-qn/page": [
+    "/[user]/contest/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin/[adminid]/add-qn/page.js"
+      "static/chunks/app/[user]/contest/page.js"
     ],
-    "/admin/[adminid]/del-qn/page": [
+    "/[user]/contest/ongoing/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin/[adminid]/del-qn/page.js"
+      "static/chunks/app/[user]/contest/ongoing/page.js"
+    ],
+    "/[user]/contest/ongoing/[contestid]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[user]/contest/ongoing/[contestid]/page.css",
+      "static/chunks/app/[user]/contest/ongoing/[contestid]/page.js"
+    ],
+    "/[user]/contest/ended/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[user]/contest/ended/page.js"
+    ],
+    "/[user]/contest/upcoming/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[user]/contest/upcoming/page.js"
+    ],
+    "/[user]/problems/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[user]/problems/page.js"
+    ],
+    "/[user]/problems/[question]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[user]/problems/[question]/page.css",
+      "static/chunks/app/[user]/problems/[question]/page.js"
+    ],
+    "/[user]/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[user]/profile/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",
