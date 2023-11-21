@@ -1,15 +1,35 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/admin/[adminid]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/[adminid]/page.js"
+    ],
+    "/admin/[adminid]/add-contest/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/[adminid]/add-contest/page.js"
+    ],
+    "/admin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/page.js"
+    ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
+    "/[user]/home/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[user]/home/page.js"
     ],
     "/[user]/layout": [
       "static/chunks/webpack.js",
@@ -17,26 +37,10 @@
       "static/css/app/[user]/layout.css",
       "static/chunks/app/[user]/layout.js"
     ],
-    "/[user]/home/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[user]/home/page.js"
-    ],
     "/[user]/contest/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[user]/contest/page.js"
-    ],
-    "/[user]/contest/ongoing/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[user]/contest/ongoing/page.js"
-    ],
-    "/[user]/contest/ongoing/[contestid]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/[user]/contest/ongoing/[contestid]/page.css",
-      "static/chunks/app/[user]/contest/ongoing/[contestid]/page.js"
     ],
     "/[user]/contest/ended/page": [
       "static/chunks/webpack.js",
@@ -48,10 +52,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[user]/contest/upcoming/page.js"
     ],
+    "/[user]/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[user]/profile/page.js"
+    ],
     "/[user]/problems/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[user]/problems/page.js"
+    ],
+    "/admin/[adminid]/add-qn/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/[adminid]/add-qn/page.js"
     ],
     "/[user]/problems/[question]/page": [
       "static/chunks/webpack.js",
@@ -59,15 +73,10 @@
       "static/css/app/[user]/problems/[question]/page.css",
       "static/chunks/app/[user]/problems/[question]/page.js"
     ],
-    "/[user]/profile/page": [
+    "/register/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[user]/profile/page.js"
-    ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/register/page.js"
     ]
   }
 }

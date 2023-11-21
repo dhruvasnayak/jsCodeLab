@@ -6,8 +6,7 @@ export default function Admin() {
     const params = useParams();
     const addqn = `/admin/${params.adminid}/add-qn`
     const delqn = `/admin/${params.adminid}/del-qn`
-    const deluser = `/admin/${params.adminid}/del-user`
-    const acontest = `/admin/${params.adminid}/acontest`
+    const addcontest = `/admin/${params.adminid}/add-contest`
     return (
         <div>
             <div class="bg-red-400 text-white p-4 shadow-md">
@@ -22,10 +21,7 @@ export default function Admin() {
                     <Link href={delqn} className="text-blue-900 hover:text-blue-500">Delete Question</Link>
                 </div>
                 <div>
-                    <Link href={deluser} className="text-blue-900 hover:text-blue-500">Delete User</Link>
-                </div>
-                <div>
-                    <Link href={acontest} className="text-blue-900 hover:text-blue-500">Contest</Link>
+                    <Link href={addcontest} className="text-blue-900 hover:text-blue-500">Add Contest</Link>
                 </div>
             </div>
         </div>

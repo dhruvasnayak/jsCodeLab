@@ -21,7 +21,6 @@ const Upcoming = () => {
             console.error('Error fetching data:', error);
           }
         };
-    
         fetchData();
       }, []);
     return (
